@@ -1,0 +1,3 @@
+[submodule "tools/bids-neuroimaging-space"]
+	path = tools/bids-neuroimaging-space
+	url = https://huggingface.co/spaces/TobiasPitters/bids-neuroimaging
