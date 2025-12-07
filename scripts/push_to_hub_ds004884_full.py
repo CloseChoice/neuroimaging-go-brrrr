@@ -4,7 +4,7 @@ from datasets import load_dataset
 
 # Load the BIDS dataset
 print("Loading BIDS dataset...")
-ds = load_dataset('bids', data_dir="data/openneuro/ds004884-download", streaming=True)
+ds = load_dataset("bids", data_dir="data/openneuro/ds004884-download", streaming=True)
 
 print(f"Dataset loaded: {ds}")
 
@@ -12,7 +12,7 @@ ds.push_to_hub(
     repo_id="TobiasPitters/ds004884",
     commit_message="Add Aphasia Recovery Cohort (ARC) BIDS dataset",
     private=False,
-    num_shards={"train": 500}  # Needed, otherwise I ran into OOM issues.
+    num_shards={"train": 500},  # Needed, otherwise I ran into OOM issues.
 )
 
 # After pushing, manually:

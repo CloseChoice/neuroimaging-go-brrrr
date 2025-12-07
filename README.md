@@ -6,7 +6,7 @@ This repository is meant to be collection of small tools to improve neuro- and m
 This is a growing list of resources that might help us in our task. At best once someone took a look, we create directory for each where we document what was learned:
  - datasets:
      - acute https://openneuro.org/datasets/ds004889/versions/1.1.2  described here https://pubmed.ncbi.nlm.nih.gov/39095364/
-     - chronic https://openneuro.org/datasets/ds004884/versions/1.0.2 described here https://pubmed.ncbi.nlm.nih.gov/39251640/ -> already on HuggingFace: https://huggingface.co/datasets/hugging-science/arc-aphasia-bids 
+     - chronic https://openneuro.org/datasets/ds004884/versions/1.0.2 described here https://pubmed.ncbi.nlm.nih.gov/39251640/ -> already on HuggingFace: https://huggingface.co/datasets/hugging-science/arc-aphasia-bids
  - code:
      - https://github.com/Project-MONAI: a GitHub org that wants to improve all things AI related to healthcare imaging.
      - https://github.com/Project-MONAI/tutorial: Tutorials for MONAI models and transformations
