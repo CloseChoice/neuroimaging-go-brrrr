@@ -21,7 +21,7 @@ format:
 	uv run ruff format .
 
 check:
-	uv run mypy .
+	uv run mypy --strict --python-version 3.11 --ignore-missing-imports src/ tests/ scripts/
 
 test:
 	uv run pytest
