@@ -1,6 +1,6 @@
 # BUG-001: Phantom Submodule Breaks pip install from Git
 
-**Status**: Open
+**Status**: Closed (v0.2.1)
 **Severity**: Critical (blocks primary use case)
 **Introduced**: Commit `ef99e83` ("add README and add the arc-aphasia-bids tool")
 **Discovered**: 2025-12-11
@@ -9,7 +9,7 @@
 
 Installing this package from git fails with:
 
-```
+```text
 fatal: No url found for submodule path 'tools/arc-aphasia-bids' in .gitmodules
 ```
 
@@ -34,7 +34,7 @@ This blocks `pip install git+https://github.com/...` which is the primary distri
 ```
 
 **But `git ls-tree HEAD tools/` shows TWO gitlinks:**
-```
+```text
 160000 commit f6e7e80803e19cd8db517c081486f4eb295fd8d4  tools/arc-aphasia-bids
 160000 commit 3b8d8f6d5480f789f532f3a5d356970d1c45ccc4  tools/bids-neuroimaging-space
 ```
@@ -107,5 +107,5 @@ To prevent this in the future:
 
 ## References
 
-- Git submodule internals: https://git-scm.com/book/en/v2/Git-Tools-Submodules
-- Mode 160000 = gitlink: https://git-scm.com/docs/git-ls-tree
+- [Git submodule internals](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+- [Mode 160000 = gitlink](https://git-scm.com/docs/git-ls-tree)
