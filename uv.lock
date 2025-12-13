@@ -416,7 +416,7 @@ toml = [
 [[package]]
 name = "datasets"
 version = "4.4.2.dev0"
-source = { git = "https://github.com/huggingface/datasets.git?rev=004a5bf4addd9293d6d40f43360c03c8f7e42b28#004a5bf4addd9293d6d40f43360c03c8f7e42b28" }
+source = { git = "https://github.com/huggingface/datasets.git?rev=0ec4d87dfe0a3545308a8c69459b5ed9aff440fb#0ec4d87dfe0a3545308a8c69459b5ed9aff440fb" }
 dependencies = [
     { name = "dill" },
     { name = "filelock" },
@@ -1077,7 +1077,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "datasets", git = "https://github.com/huggingface/datasets.git?rev=004a5bf4addd9293d6d40f43360c03c8f7e42b28" },
+    { name = "datasets", git = "https://github.com/huggingface/datasets.git?rev=0ec4d87dfe0a3545308a8c69459b5ed9aff440fb" },
     { name = "hf-xet", specifier = ">=1.0.0" },
     { name = "huggingface-hub", specifier = ">=0.32.0" },
     { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.11.0" },
