@@ -99,7 +99,7 @@ warn_redundant_casts = true
 warn_unused_ignores = true
 
 [tool.uv.sources]
-# CRITICAL: Pin to specific commit until upstream PR #7896 is merged.
-# PyPI stable has embed_table_storage bug causing SIGKILL on Sequence(Nifti()) after ds.shard()
-# See docs/TODO.md for tracking.
-datasets = { git = "https://github.com/huggingface/datasets.git", rev = "004a5bf4addd9293d6d40f43360c03c8f7e42b28" }
+# Pin to git main for Nifti() features not yet in PyPI stable.
+# Our workaround in builder.py handles embed_table_storage bug (PR #7896 still open).
+# Updated: 2025-12-12
+datasets = { git = "https://github.com/huggingface/datasets.git", rev = "0ec4d87dfe0a3545308a8c69459b5ed9aff440fb" }
