@@ -1,6 +1,6 @@
 # TODO - Codebase Maintenance
 
-Findings from comprehensive codebase audit (2024-12-08).
+Findings from comprehensive codebase audit (2025-12-08), updated 2025-12-12.
 
 ## Warnings (Should-Fix When Possible)
 
@@ -10,12 +10,12 @@ Findings from comprehensive codebase audit (2024-12-08).
 **Priority**: Medium
 **Tracking**: [huggingface/datasets#7896](https://github.com/huggingface/datasets/pull/7896)
 
-The project pins `datasets` to git commit `004a5bf4` due to upstream bug where `embed_table_storage` crashes with SIGKILL on sharded `Sequence(Nifti())` columns.
+The project pins `datasets` to git commit `0ec4d87d` due to upstream bug where `embed_table_storage` crashes with SIGKILL on sharded `Sequence(Nifti())` columns.
 
 **Action**: When PR #7896 is merged and released:
 
 1. Update `pyproject.toml` to use released version
-2. Remove pandas workaround in `src/bids_hub/core/builder.py:176-190`
+2. Remove pandas workaround in `src/bids_hub/core/builder.py` (in `push_dataset_to_hub`)
 3. Test uploads still work
 
 ### 2. CLI Test Coverage at 60%
@@ -42,7 +42,7 @@ Several error handling branches not fully exercised. Core logic is tested elsewh
 
 **File**: `src/bids_hub/core/builder.py`
 
-Once upstream PR #7896 merges, remove the pandas roundtrip workaround (lines 176-190) for better performance during uploads.
+Once upstream PR #7896 merges, remove the pandas roundtrip workaround (lines 185-206) for better performance during uploads.
 
 ---
 
@@ -50,10 +50,10 @@ Once upstream PR #7896 merges, remove the pandas roundtrip workaround (lines 176
 
 | Metric | Value |
 |--------|-------|
-| Tests | 68 passing |
+| Tests | 78 passing |
 | Coverage | 81% overall |
 | Ruff | 0 issues |
 | Mypy | 0 errors |
 | Critical Issues | None |
 
-Last audit: 2024-12-08
+Last audit: 2025-12-12
