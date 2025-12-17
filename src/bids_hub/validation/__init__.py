@@ -1,5 +1,9 @@
 """Validation module - re-exports for backward compatibility."""
 
+from .aomic import (
+    AOMIC_PIOP1_VALIDATION_CONFIG,
+    validate_aomic_piop1_download,
+)
 from .arc import (
     ARC_VALIDATION_CONFIG,
     EXPECTED_COUNTS,  # Backward compat
@@ -24,6 +28,7 @@ from .isles24 import (
 )
 
 __all__ = [
+    "AOMIC_PIOP1_VALIDATION_CONFIG",
     "ARC_VALIDATION_CONFIG",
     "EXPECTED_COUNTS",
     "ISLES24_ARCHIVE_MD5",
@@ -35,6 +40,7 @@ __all__ = [
     "check_count",
     "check_phenotype_readable",
     "check_zero_byte_files",
+    "validate_aomic_piop1_download",
     "validate_arc_download",
     "validate_dataset",
     "validate_isles24_download",
