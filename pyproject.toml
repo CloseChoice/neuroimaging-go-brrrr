@@ -52,7 +52,7 @@ dev = [
     "pandas-stubs>=2.0.0",
     "pre-commit>=3.0.0",
     "pytest>=8.0.0",
-    "pytest-cov>=4.0.0",
+    "pytest-cov>=7.1.0",
     "ruff>=0.7.0",
 ]
 
